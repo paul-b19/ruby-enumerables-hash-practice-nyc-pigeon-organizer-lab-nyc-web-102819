@@ -19,7 +19,9 @@ def nyc_pigeon_organizer(data)
   new_data.map do |key, value|
     data.map do |k, v|
       v.map do |i|
-        value[k] << v if i == key
+        if i == key
+          value[k] << v
+        end
       end
     end
   end
