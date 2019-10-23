@@ -29,7 +29,7 @@ def nyc_pigeon_organizer(data)
   data.map do |k, v|
     v.map do |kk, vv|
       vv.map do |i|
-        new_data[i][k] << v.to_s
+        new_data[i][k] << kk
       end
     end
   end
