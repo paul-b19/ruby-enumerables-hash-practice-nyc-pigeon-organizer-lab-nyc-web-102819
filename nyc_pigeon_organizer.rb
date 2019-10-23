@@ -6,4 +6,10 @@ def nyc_pigeon_organizer(data)
     end
   end
   p new_data
+  new_data.map do |key, value|
+    data.map do |k, v|
+      new_data[key][k] = []
+    end
+  end
+  p new_data
 end
