@@ -16,14 +16,23 @@ def nyc_pigeon_organizer(data)
   end
   # pp new_data
   
-  new_data.map do |key, value|
-    data.map do |k, v|
-      v.map do |i|
-        if i == key
-          value[k] << v
-        end
+  #new_data.map do |key, value|
+  #  data.map do |k, v|
+  #    v.map do |i|
+  #      if i == key
+  #        value[k] << v
+  #      end
+  #    end
+  #  end
+  #end
+  
+  data.map do |k, v|
+    v.map do |kk, vv|
+      vv.map do |i|
+        new_data[i][k] << v
       end
     end
   end
+    
   pp new_data
 end
